@@ -6,6 +6,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <script>
+        function copyToClipboard(text) {
+            var textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert("Text copied to clipboard: " + text);
+        }
+    </script>
+
     <nav id="nav-bar"> 
         <span>
             <a class="nav-link" href="index.html">Home</a>
@@ -23,14 +36,17 @@
     <article>
         <h2>Perkembangan Teknologi</h2>
         <p>Perkembangan teknologi informasi memungkinkan akses yang mudah dan canggih bagi masyarakat. Remaja perlu memahami dampak positif dan negatifnya serta menggunakan teknologi dengan bijaksana. </p>
+        <button class="copy-btn" onclick="copyToClipboard('Perkembangan Teknologi')">Salin</button>
     </article>
     <article>
         <h2>Peranan Komputer dalam Kehidupan Modern</h2>
         <p>Komputer telah menjadi bagian penting dari kehidupan modern. Dari pekerjaan hingga hiburan, komputer memiliki peran yang tak tergantikan. Artikel ini akan menjelaskan bagaimana komputer memengaruhi berbagai aspek kehidupan kita.</p>
+        <button class="copy-btn" onclick="copyToClipboard('Peranan Komputer dalam Kehidupan Modern')">Salin</button>
     </article>
     <article>
         <h2>Evolusi Komputer: Dari Awal Hingga Sekarang</h2>
         <p>Komputer telah mengalami perkembangan yang luar biasa sejak penemuan awalnya. Dari komputer kuno yang besar dan rumit hingga perangkat yang lebih kecil dan lebih kuat saat ini, evolusi komputer telah mengubah cara kita bekerja, belajar, dan berkomunikasi.</p>
+        <button class="copy-btn" onclick="copyToClipboard('Evolusi Komputer: Dari Awal Hingga Sekarang')">Salin</button>
     </article>
 </body>
 </html>
